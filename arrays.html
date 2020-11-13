@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Arrays</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function arraysnew(){
+			var pais = ['Mexico', 'España', 'Argentina', 'Chile', 'Colombia', 'Venezuela', 'Perú', 'Costa Rica'];
+
+		}
+		function arraysvacio(){
+			var fruta = [];
+			var fruta = new Array();
+		}
+		// Para que JavaScript comprenda que una variable es un array hay que indicárselo explícitamente. Es válido: var pais = []; pais[0] = 'Mexico';
+
+		// Sin embargo no es válido: var pais; pais[0] = 'Mexico'; ¿Por qué? Porque en este código no hemos declarado explícitamente que pais sea un array. Si no lo hemos declarado, no podemos empezar a usar índices asociados a la variable como si se tratara de un array. Si lo hacemos se entiende como un error en el código, lo que dará lugar a que JavaScript no se ejecute.
+
+		//var ciudad = ["Buenos Aires", , "Madrid"];
+
+		//Esta declaración supone que el array tiene 3 elementos. Ciudad[0] que tiene valor Buenos Aires, ciudad[1] que tiene valor undefined, y ciudad [2] que tiene valor Madrid.
+
+		// Los arrays por defecto siempre empiezan por el índice 0, pero en determinadas ocasiones algunos programadores prescinden de ese índice. Por ejemplo
+		// var mes = []; mes[0] = undefined; mes[1] = 'enero'; mes[2]='febrero'; mes[3]='marzo'; mes[4] = 'abril'; mes[5]='mayo'; mes[6] = 'junio'; mes[7]='julio'; mes[8]='agosto'; mes[9]='septiembre'; mes[10]='octubre'; mes[11]='noviembre'; mes[12]='diciembre';
+
+		// La propiedad length de un array indica el número máximo de elementos en el array de acuerdo con el índice máximo existente (independientemente de que los elementos del array tengan contenido o no). Por ejemplo si definimos var oficina = []; oficina[25] = 'Oficial José Vargas Corononado’; la propiedad oficina.length devuelve 26, número de elementos para el array (de 1 a 25 más el correspondiente al 0).
+		
+		function arrays(){
+			 var mes; mes =[]; mes[0] = undefined; mes[1] = 'enero'; mes[2]='febrero'; mes[3]='marzo'; mes[4] = 'abril'; mes[5]='mayo'; mes[6] = 'junio'; mes[7]='julio'; mes[8]='agosto'; mes[9]='septiembre'; mes[10]='octubre'; mes[11]='noviembre'; mes[12]='diciembre';
+
+			 var pais = ['Mexico', 'España', 'Argentina', 'Chile', 'Colombia', 'Venezuela', 'Perú', 'Costa Rica'];
+			 var msg, msg2; msg = 'El país de índice 2 es: ' + pais[2] + '\n\n';
+			 var datos = ['Frío', 33, false, 'nube', -11.22, true, 3.33, 'variado'];
+			 msg = msg + 'En el indice 1 de datos tenemos: ' + datos[1] + ' (numérico), p.ej. multiplica por 2: ' + (datos[1]*2) + '\n\n';
+			 msg = msg + 'En el indice 2 de datos tenemos: ' + datos[2] + ' y es booleano\n\n';
+			 msg = msg + 'En el índice 3 de datos tenemos: ' + datos[3] + ' y es un texto \n\n';
+			 msg = msg + 'En el índice 40 de datos tenemos: ' + datos[40] + '\n\n';
+			 var fruta = [];
+			 msg = msg + 'En el índice 0 de fruta tenemos: ' + fruta[0] + ' y en el índice 30 '+  fruta[30] + '\n\n';
+			 fruta[1] = 'pera'; fruta[2] = undefined; fruta[30] = 'manzana';
+			 msg = msg + 'En el índice 0 de fruta tenemos: ' + fruta[0] + ' y en el índice 30 '+  fruta[30] + '\n\n';
+			 alert (msg);
+			 msg2 = 'Mostramos el array país: ' + pais + '\n\n';
+			 msg2 = msg2 + 'Mostramos el array fruta: ' + fruta + '\n\n';
+			 msg2 = msg2 + 'Mostramos el array datos: ' + datos + '\n\n';
+			 msg2 = msg2 + 'Mostramos el array mes: ' + mes + '\n\n';
+			 msg2 = msg2 + 'Intentamos sumar o concatenar arrays: ' + (pais + fruta) +'\n\n';
+			 msg2 = msg2 + 'Valor length en el array pais es: ' + (pais.length) + ' y en el array fruta es ' + fruta.length +'\n\n';
+			 alert (msg2);
+			 var ejemplo = new Array(); alert('Contenido de ejemplo: '+ ejemplo); ejemplo [0]= 1; ejemplo [2]= 44;
+			 alert('Contenido de ejemplo: '+ ejemplo);
+		}
+	</script>
+	<button onclick="arrays()">Arrays</button>
+</body>
+</html>

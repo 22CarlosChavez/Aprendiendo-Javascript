@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Console</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// let te permite declarar variables limitando su alcance (scope) al bloque, declaración, o expresión donde se está usando. Lo anterior diferencia let de la palabra reservada var , la cual define una variable global o local en una función sin importar el ámbito del bloque
+
+		let total = 0, count = 1;
+		while (count <= 10) {
+			total += count;
+			count += 1;
+		}
+		console.log(total);
+		 // → 55
+		
+		// EL TERMINO CONSOLE.LOG ES PARA MOSTRAR UN MENSAJE EN LA CONSOLA EN ESTE CASO SE UTILIZA
+		// EN EL NAVEGADOR POR DEFECTO QUE SE UTILIZA PARA LAS PRACTICAS DE javascript
+		 var a = 3, b = 4;
+		 if (a < b) {
+		 	console.log("a es menor que b");
+		 }else{
+		 	console.log("b es mayor que a");
+		 }
+
+		//UNARY OPERATORS
+		console.log(typeof 4.5); //El navegador interpretará un Number gracias al atributo typeof 
+		console.log(typeof "hola mundo"); //El navegador interpretará un String gracias al atributo typeof
+		console.log(-(10-2)); //El resultado será: -8
+		
+		// BOOLEAN VALUES
+		console.log(3>2); 					//TRUE
+		console.log(3<2); 					//FALSE
+		//En el siguiente ejemplo se trata de comprender la comparacion entre strings. La comparacion se inicia
+		//por el numero de letras que contiene cada palabra, por ello se utiliza los simbolos de comparacion > o <
+		console.log("arbol"<"bicicleta"); 	//TRUE
+		console.log("arbol">"bicicleta"); 	//FALSE
+
+		//Otros ejemplos a continuacion se emplean con los simbolos de comparacion:
+		console.log("Itchy" != "Scratchy");	//TRUE
+		console.log("Apple" == "Orange");	//FALSE
+		console.log(NaN == NaN); 			//FALSE
+	
+		//LOGICAL OPERATORS
+		console.log(true && false); 		//FALSE
+		console.log(true && true);			//TRUE
+		console.log(false && false);		//FALSE
+		console.log(false || true);			//TRUE
+		console.log(false || false);		//FALSE
+		console.log(!true);					//FALSE
+		console.log(!false);				//TRUE
+
+		// BINDINGS
+		let ten = 10;
+		console.log(ten * ten); 			//TRUE
+
+		let mood = "light";
+		console.log(mood); //light
+		mood = "dark";
+		console.log(mood); //dark
+
+		//Las palabras var y const pueden ser usadas para crear bindings o tambien  se puede utilizar let
+		let name = "Carlos";
+		const greeting = "Hola";
+		var welcome = "bienvenido!"; 
+		console.log(greeting + ' ' + name + ' ' + welcome);
+
+		//RETURN VALUES
+		console.log(Math.max(2,4)); //4
+		console.log(Math.min(2,4)+100); //102
+
+		//FUNCTIONS
+		prompt("Introduce tu contraseña");
+
+		//CONTROL FLOW
+		let number = Number(prompt("Introduce un numero"));
+		console.log("Tu numero fue: "+ number);
+		alert("Tu numero fue: "+number);
+
+		// EJEMPLO
+		let number1 = Number(prompt("Dame un numero:"));
+		alert("Tu numero fue: "+numsber1);
+		console.log("Tu numero fue:"+number1);
+		alert("Tu numero multiplicado por el mismo es: "+ number1 * number1);
+		console.log("Tu numero multiplicado por el mismo es: "+number1*number1);
+	</script> 
+</body>
+</html>

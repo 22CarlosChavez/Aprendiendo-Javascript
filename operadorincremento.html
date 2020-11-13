@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Operador Incremento</title>
+</head>
+<body>
+	<!-- <table border="1" cellpadding="7" cellspacing="0">
+		<tbody>
+			<tr>
+				<td style="background-color: rgb(204, 204, 204);">
+					<p style="text-align: center;">
+						<b>OPERADORES</b></p>
+				</td>
+				<td style="background-color: rgb(204, 204, 204);">
+					<p style="text-align: center;">
+						<b>DESCRIPCI&Oacute;N</b></p>
+				</td>
+				<td style="background-color: rgb(204, 204, 204);">
+					<p style="text-align: center;">
+						<b>EJEMPLO</b></p>
+				</td>
+				<td style="background-color: rgb(204, 204, 204);">
+					<p style="text-align: center;">
+						<b>EQUIVALE A</b></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>=</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Asignaci&oacute;n</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a = 5</p>
+				</td>
+				<td style="text-align: center;" valign="top">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>+=</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Suma lo indicado</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a += b</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a = a + b</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>-=</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Resta lo indicado</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a -= b</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a = a - b</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>*=</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Multiplica por lo indicado</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a *= b</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a = a * b</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>%=</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Calcula el m&oacute;dulo por lo indicado</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a %= b</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a = a % b</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>++ (anterior)</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Incremento unitario antes de operar</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						++a * 2</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a = a + 1</p>
+					<p style="text-align: center;">
+						a * 2</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>++ (posterior)</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Incremento unitario despu&eacute;s de operar</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a++ * 2</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a * 2</p>
+					<p style="text-align: center;">
+						a = a + 1</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>-- (anterior)</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Decremento unitario antes de operar</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						--a * 2</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a = a - 1</p>
+					<p style="text-align: center;">
+						a * 2</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center;">
+						<b>-- (posterior)</b></p>
+				</td>
+				<td>
+					<p style="text-align: center;">
+						Decremento unitario despu&eacute;s de operar</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a-- * 2</p>
+				</td>
+				<td valign="top">
+					<p style="text-align: center;">
+						a * 2</p>
+					<p style="text-align: center;">
+						a = a - 1</p>
+				</td>
+			</tr>
+		</tbody>
+	</table> -->
+	<script type="text/javascript">
+		function asignacion(){
+			a=5;
+			alert("La variable A es igual a: "+a);
+		}
+		function suma(){
+			var a = 3, b = 2;
+			a = a+b;
+			alert("La variable A ahora vale: "+a);
+		}
+		function resta(){
+			var a = 5, b = 2;
+			a = a - b;
+			alert("La variable A ahora vale: "+a);
+		}
+		function multiplicacion(){
+			var a = 3, b = 2;
+			a = a * b;
+			alert("La variable A ahora vale: "+a);
+		}
+		function modulo(){
+			var a = 6, b = 2;
+			a = a % b;
+			alert("La variable A ahora vale: "+a); 
+		}
+		function incrementoS(){
+			var  a = 1;
+			// a = a + 1;
+			// b = a * 2;
+			a++;
+			alert("La variable A ahora vale: "+a);
+			// alert("La variable B ahora vale: "+b);
+		}
+		function incrementoR(){
+			var a = 6;
+			//a = a - 1;
+			// a = a * 2;
+			alert("La variable A ahora vale: " +a);
+		}
+	</script>
+	<button onclick="asignacion()">Operador1</button>
+	<button onclick="suma()">Operador2</button>
+	<button onclick="resta()">Operador3</button>
+	<button onclick="multiplicacion()">Operador4</button>
+	<button onclick="modulo()">Operador5</button>
+	<button onclick="incrementoS()">Operador6</button>
+	<button onclick="incrementoR()">Operador7</button>
+</body>
+</html>

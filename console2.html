@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Console 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//!Number.isNAN es para determinar un numero
+		
+		 let number = Number(prompt("Ingresa un numero"));
+		 console.log("Tu numero fue: "+number);
+		 if (!Number.isNaN(number)) {
+		 	alert("Tu numero es la raiz cuadrada de: "+number * number);
+		 	console.log("Tu numero es la raiz cuadrada de: "+number * number);
+		 }
+		
+		 let number2 = Number(prompt("Ingresa un numero nuevamente:"));
+		 console.log("Tu numero fue: "+number2);
+		 if (!Number.isNaN(number2)) {
+		 	alert("Tu numero es la raiz cuadrada de: "+number2 * number2);
+		 	console.log("Tu numero es la raiz cuadrada de: "+number2 * number2);
+		 }else{
+		 	alert("Hey! dame un numero");
+		 	console.log("Hey! dame un numero");
+		 }
+
+		 alert("Ingresa un numero del 1 al 100 para hacer tu multiplicacion")
+		 let number3 = Number(prompt("Ingresa un numero: "))
+		 let number4 = Number(prompt("Ingresa un segundo numero: "))
+		 if (number3 >= 1 && number3 <= 10) {
+		 	alert("El primer numero que ingresaste del 1 al 10 es: "+number3)
+		 	alert("El resultado de tu numero multiplicado por si mismo es: "+number3*number4)
+		 }else if(number3 >= 11 && number3 <= 50){
+		 	alert("El primer numero que ingresaste del 11 al 50 es: "+number3)
+		 	alert("El resultado de tu numero multiplicado por si mismo es: "+number3*number4)
+		 }else if(number3 >= 51 && number3 <= 100){
+		 	alert("El primer numero que ingresaste del 51 al 100 es: "+number3)
+		 	alert("El resultado de tu numero multiplicado por si mismo es: "+number3*number4)
+		 }
+		 else{
+		 	alert("No has ingresado un numero valido")
+		 }
+
+		// //LA TABLA DEL 20
+		 let number5 = 2;
+		 while (number5 <= 20){
+		 	alert("El numero es: "+number5)
+		 	number5 = number5 + 2; 
+		 }
+
+		// //MULTIPLICANDO EL NUMERO RESULTADO POR 2
+		 let number6 = 2;
+		 while(number6 <= 20){
+		 	alert("El numero es: "+number6)
+		 	number6 = number6 * 2;
+		 }
+
+		//DO WHILE
+
+		 let carlos;
+		 do
+		 	carlos = prompt("Quien eres?")
+		 while(!carlos)
+		 	alert("Bienvenido: "+carlos);
+
+		//FOR LOOPS
+		 for (let number = 0; number <= 12; number = number + 2) {
+		 	console.log(number);
+		 }
+		
+		 let result = 1;
+		 for (let counter = 0; counter < 10; counter = counter + 1) {
+		 	result = result * 2;
+		 }
+		 console.log(result);
+
+		// BREAKING OUT OF A LOOP
+		 for (let current = 20; ; current = current + 1 ) {
+		 	if (current % 7 == 0) {
+		 		alert("El valor es: "+current);
+		 		console.log("El valor es: "+current);
+		 		break;
+		 	}
+		 }
+
+		//Tenemos una varible llamada a = 5; si a es menor o igual a 15, se cumple esta condicion, incrementa de 5 en 5 hasta llegar a 15
+		 for (var a = 5; a <= 15; a += 5) {
+		 	alert("El resultado es: "+a);
+		 }
+
+		 alert("Ingresa tu clima preferido: Verano, Invierno, Primavera, Otoño")
+		 switch(prompt("Cual es tu clima preferido?: ")){
+		 	case  "Verano" :
+		 		alert("No olvides ponerte ropa comoda")
+		 			break
+		 	case  "Invierno" : 
+		 		alert("No olvides ponerte tu sueter")
+		 			break
+		 	case  "Primavera" :
+		 		alert("No olvides ponerte ropa fresca")
+		 			break
+		 	case  "Otoño" :
+		 		alert("No olvides de recorger la basura de los arboles")
+		 			break
+		 	default :
+		 		alert("Ingresa algun clima preferido")
+		 }
+
+		// LENGTH: la propiedad length cuenta las letras que tiene cada string definido en una variable, length nos cuenta tambien los espacios como letras
+		 let abc = "Carlos";
+		 console.log(abc.length);
+
+		//FUNCTIONS
+		 const a = function(){
+		 	alert("Hola soy a");
+		 };
+		 a();
+
+		 const a = function(b,c){
+		 	let d = 1;
+		 	for (let e = 0; e < c; e++) {
+		 		d *= b;
+		 	}
+		 		return d;
+		 };
+		 console.log(a(2,10));
+
+		 let x = 10;
+		 if (true) {
+		 	let y = 20;
+		 	var z = 30;
+		 	console.log(x + y + z);		//60
+		 }								// y is not visible here
+		 	console.log(x + z);			// 40
+
+		//FUNCTION DECLARATION
+		//, (coma) utilizamos esta expresion cuando concatenamos una funcion en un console.log y para alert utilizamos + (signo mas). Hacemos un return el cual nos mostrara el string llamado te vas a graduar en tu carrera favorita
+		 console.log("El futuro dice:",future());
+		 alert("El futuro dice: "+future());
+		 function future(){
+		 	return "Tu vas a graduar en tu carrera favorita";
+		 }
+
+		//En esta funcion llamada saludo con parametro "quien" mandamos a llamar en el primer console.log un string llamado hola y concatenamos el parametro quien, seguido de esto tenemos la funcion saludo con un string "Carlos" el cual saludo es representante de quien, por logica al imprimir console.log("Hola: "+quien) dirá:  Hola carlos, seguido de esto se imprimiran los siguientes console.log, esto comunmente se le conoce como POO (Programcion Orientada a Objetos) o en ingles (Object Oriented Programming)
+		 function saludo(quien){
+		 console.log("Hola: "+ quien);
+		}
+		 saludo ("Carlos");
+		 console.log("Adios");
+		 console.log("Cuidate mucho!");
+	
+		// blow the stack
+		 function wutang(){
+		 	return clan;
+		 }
+		 function clan(){
+		 return wutang;
+		 }
+		 console.log(wutang()+ "Wu Tang Clan"); //??
+
+	</script>
+
+</body>
+</html>

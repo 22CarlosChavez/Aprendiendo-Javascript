@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Variables</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//**************************************************************************
+				//DECLARACION DE VARIABLES//
+		//**************************************************************************		
+		function variable(){
+			//Declarando variables en codigo demorado
+			var carros;
+			var bicicleta;
+			var autobus;
+			//Optimización del codigo (PREFERIBLE)
+			var carros, bicicleta, autobus;
+			//Optimizando con valores
+			var carros= 1, bicicleta = 2, autobus = 3;
+
+			// Aunque la declaración de variables no es obligatoria, se recomienda siempre declarar las variables. Si se trata de hacer uso de un nombre de variable que no existe para asignárselo a una variable sí existente, se produce un error y el código JavaScript deja de funcionar.
+
+		}
+			//EJEMPLO
+		function variable2(){
+			var mayorDe25 = false;
+			mayorDe25 = variableInexistente; //Genera un error y el código no se ejecuta
+			alert ('Mostrar un mensaje no se ejecuta');
+			// Importante: un “pequeño error” al escribir un nombre de variable puede generar un error (no visualizado al no aparecer mensaje de error) y hacer que nuestro código JavaScript deje de funcionar.	
+	
+		}
+
+		//**************************************************************************
+				//DECLARACION DE VARIABLES BOOLEANAS
+		//**************************************************************************
+		//true y false son palabras clave JavaScript. Por tanto no podemos usarlas como nombres de variables. Si escribiéramos true = 25; el intérprete del navegador interpretaría que existe un error, por lo que el código JavaScript no se ejecutará (sin embargo, no veremos ningún mensaje de error, simplemente veremos que JavaScript no funciona).
+
+		function variableB(){
+			//+ es igual a concatenar cadenas
+			var a=1, b=2, c=3;
+			var casado = true;
+			var mayorDe25 = false;
+			var texto1 = 'En un lugar de la Mancha...';
+			//mayorDe25 = variableInexistente; //Genera un error y el código no se ejecuta
+			alert ('La variable casado vale: ' + casado);
+			alert ('La variable mayorDe25 vale: ' + mayorDe25);
+			alert ('La variable casado vale (forzamos mostrar equivalente numérico): ' + casado*1);
+			alert ('La variable mayorDe25 vale (forzamos mostrar equivalente numérico): ' + mayorDe25*1);
+			alert ('La variable casado vale ahora: ' + casado);
+			alert ('La suma de a, b y c vale: ' + (a+b+c));
+			alert ('Operación sin sentido, obtenemos: ' + (texto1*1));
+			alert ('Mostramos equivalente de texto de la variable casado: ' + casado.toString());
+		}
+	</script>
+	<button onclick="variableB()">Click aquí</button>
+</body>
+</html>

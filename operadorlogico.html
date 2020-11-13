@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Operador Logico</title>
+</head>
+<body>
+	<img src="https://1.bp.blogspot.com/-s2-lc_xq-_Q/VAJp7qyjbmI/AAAAAAAAAIw/MrpmQyxnUdw/s1600/Operadores%2BLogicos%2BJAVA.png">
+	<br>
+	<script type="text/javascript">
+		//document.write significa que vamos a imprimir ese valor
+		function operador1(){
+			var a = 1;
+			var b = 1;
+			if (a == b) { //Esta sentencia dicta que sí a es igual a b le mandará la alert
+				alert("A es igual que b");
+			}
+		}
+		function operador2(){
+			var c = 1;
+			var d = 1;
+			if (c === d ) {
+				alert("C es estrictamente igual que d")
+			}
+		}
+		function operador3(){
+			var e = 1;
+			var f = 2;
+			if (e != f) {
+				alert("E es distinto a F");
+			}
+		}
+		function operador4(){
+			var g = 1;
+			var h = 2;
+			if (g !== h) {
+				alert("G es estrictamente distinto a H");
+			}
+		}
+		// Menor, menor o igual, mayor, mayor o igual
+		function operador5(){
+			var i = 1;
+			var j = 2;
+			if (i < j) {
+				alert("I es menor que J");
+			}else if(i<= j){
+				alert("I es menor o igual que J");
+			}else if(i>j){
+				alert("I es mayor que J");
+			}else if (i>=j) {
+				alert("I es mayor o igual que J");
+			}else{
+				alert("Intente de nuevo");
+			}
+		}
+		function operador6(){
+			var k = 1;
+			var l = 1;
+			var m = 2;
+			var n = 2;
+			if (m && n > k && l) {
+				alert("La variable M y N es mayor que la variable K y L");
+			}
+		}
+		function operador7(){
+			var k = 1;
+			var l = 1;
+			var m = 2;
+			var n = 2;
+			if (k && l < m && n) {
+				alert("La variable K y L es menor que la variable M y N");
+			}
+		}
+		function operador8(){
+			var o = 1, p = 2, q = 3, r = 4;
+			if (o || p < q || r) {
+				alert("O y P es menor que Q y R");
+			} 
+		}
+		function operador9(){
+			var o = 5, p = 6, q = 3, r = 4;
+			if (o || p > q || r) {
+				alert("O y P es mayor que Q y R");
+			}
+		}
+		function operador10(){
+			//!s no es mayor que q
+			var s = 7, q = 8;
+			alert("El valor de la variable s es: "+(!s));
+		}
+		//IMPRIMIR HOLA MUNDO
+		function imprimir(){
+			document.write("Hola mundo");
+		}
+	</script>
+	<button onclick="operador1()">operador1</button>
+	<button onclick="operador2()">operador2</button>
+	<button onclick="operador3()">operador3</button>
+	<button onclick="operador4()">operador4</button>
+	<button onclick="operador5()">operador5</button>
+	<button onclick="operador6()">operador6</button>
+	<button onclick="operador7()">operador7</button>
+	<button onclick="operador8()">operador8</button>
+	<button onclick="operador9()">operador9</button>
+	<button onclick="operador10()">operador 10</button>
+</body>
+</html>

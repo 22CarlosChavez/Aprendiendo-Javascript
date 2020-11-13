@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIPOS VARIABLES</title>
+	<style type="text/css">
+		button{
+			background-color: orange;
+			border-radius: 10px;
+			font-family: arial;
+			font-size: 15px;
+
+		}
+		p{
+			text-align: justify-all;
+			font-family: arial;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function tipovariable(){
+			// var a = 3.55;
+			// var text = 'Aprendiendo javascript';
+			// var inf = Infinity;
+			// alert('El texto aprendiendo javascript vale: '+a);
+
+			// a =3.54;
+			// if (a > 3.55) {
+			// 	alert('Eres mayor que: 3.55');
+			// } else if( a == 4){
+			// 	alert ('Eres igual que: 4');
+			// } else {
+			// 	alert ('En realidad eres: '+a);
+			// }
+
+			var infinity = Infinity;
+			alert('El valor de infinity es: '+infinity);
+		
+
+		}
+		function ejemplo(){
+		var bacterias = 3.55; var texto = 'bacterias en la probeta'; var numeroInfinito = Infinity;
+		alert('La variable bacterias vale: ' + bacterias);
+		bacterias = 3.55E5; alert('La variable bacterias vale (multiplicamos por 100000): ' + bacterias);
+		bacterias = 3.55E-5; alert('La variable bacterias ahora es un número muy pequeño: ' + bacterias);
+		alert('La variable bacterias ahora es (operación sin sentido): ' + bacterias*texto);
+		bacterias = 3.55e100000000000000000; alert('La variable bacterias ahora es demasiado grande: ' + bacterias);
+		bacterias = 3.55E-100000000000000000; alert('La variable bacterias ahora es demasiado pequeña: ' + bacterias);
+		alert('Un numero positivo dividido entre cero (indeterminación matemática) devuelve: ' + (4/0));
+		alert('Un numero negativo dividido entre cero (indeterminación matemática) devuelve: ' + (-4/0));
+		alert('Cero dividido entre cero devuelve: ' + (0/0));
+		alert('La variable numeroInfinito vale: ' + numeroInfinito);
+		var diezCentimos = .1; var veinteCentimos = .2; var treintaCentimos = .3;
+		alert('Esperamos 0.1 y lo obtenemos: ' + (veinteCentimos-diezCentimos));
+		alert('Esperamos 0.1 y no lo obtenemos: ' + (treintaCentimos-veinteCentimos));
+		}
+	</script>
+	<!-- <label>Informacion:</label>
+	<p>Tenemos una variable llamada <b>a</b> la cual tiene un valor de <b>3.54</b> donde se hace la siguiente sintaxis:
+		<br><br>
+			a =3.54;<br>
+			if (a > 3.55) {<br>
+				alert('Eres mayor que: 3.55');<br>
+			} else if( a == 4){<br>
+				alert ('Eres igual que: 4');<br>
+			} else {<br>
+				alert ('En realidad eres: '+a);<br>
+			}
+	</p> -->
+	<!-- <p><b>a</b> es igual a: <b>3.54</b></p>
+	<p>El resultado sera un alert que diga: En realidad eres: <b>a</b></p> -->
+
+	<button onclick="ejemplo()">DA CLICK!</button>
+</body>
+</html>

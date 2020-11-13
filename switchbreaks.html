@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Switch Breaks</title>
+</head>
+<body>
+	<!-- <img src="https://lh3.googleusercontent.com/-XUiZSpb-Kmp-oKMed--BpHCTIZzs-z4YvezXHI2Uyx94xTK43aZwNxhJz7mIXnu81qPqX-n3C1VA-PYVsGJGRwT0Q8mjRrP4i-GG5y9_sxUjLLnLeh8jtL3OjLxd60yAi1C7pV1Fl_Mx-m9b8WpCcHQ0XgyI9iF_7S23y5kTgkPCaffaPWu-iJaAIJjpb-4R38x98L8_5CsqSZZpmKlThdwZf9N2hRvomLGDf9E2DRbn5U3oOF1WC_-M3_R5C_mhiGHCMAWHkF2QKVOvq1XGAauo4VGeKPsXG7DeI-nZ1cUA3BRF3twW0_PCKujK1R3EvTbs2n06X9phVOmZKNrZoEoV8YxMZLrDF9pkbgsT9eyITunMMUo8XeIXFxYo37u3qYB0fxDTsQ1EZl2CTATxFarKfn7we9CLJOU48lF9HkOKRAjzL6-cQmklVdVwUnBHdz1g_3kAGD4uvKw51xs1l2ra3Wxs4UoET1nZPA5q1cNiU8S28fbC-FbFg7donjcY9vHDLeeWDoEflxht7Eegm0vuNa_dmvRD-HFkc3DsoEBFmZKsKOrnYJQqeC6EgJanzL_7GIFkYuqfE1ilK-fzJsYcyTpyelgegBsh_uYVC2zUG5yjc7x=w560-h391-no"> -->
+
+	<!-- break es opcional (pero en general recomendable) y provoca que una vez encontrada una coincidencia termine la evaluación de casos. Si no se incluye, se evaluarían el resto de casos (ejecutándose si fueran ciertos). De no incluirse break, podría producirse que se ejecuten dos o más casos.
+
+	switch realiza las comparaciones usando el operador === (igual estricto). Se permite evaluar tanto números como cadenas de texto o valores booleanos. Switch solo permite evaluar valores concretos de la expresión: no permite evaluar intervalos (pertenencia de la expresión a un intervalo o rango) ni expresiones compuestas. -->
+	<script type="text/javascript">
+		function Switch(){
+			var mes = "Enero";
+			switch(mes){
+				case "Febrero":
+				alert("El mes es Enero");
+				break;
+				case 2:
+				alert("El mes es Febrero");
+				break;
+				case 3:
+				alert("El mes es Marzo, Abril, Mayo");
+				break;
+				default:
+				alert("El mes no es los anteriores");
+				break;
+			}
+		}
+		//EJEMPLO DE IF ELSE Y SWITCH
+		function edad(){
+			var edad;
+			edad = prompt("Ingresa tu edad");
+			edad = Number(edad);
+				// && comparando y usando and
+			if (edad >= 1 && edad <= 4) {
+				alert("Eres un bebe");
+			}else if (edad >= 5 && edad <=10) {
+				alert("Eres un niño aún");
+			}else if(edad >= 11 && edad <= 17){
+				alert("Eres un jovensito aún");
+			}else if(edad >= 18 && edad <= 25){
+				alert("Eres un adulto joven");
+			}else if(edad >= 26 && edad <= 40){
+				alert("Eres un adulto");
+			}else if(edad >= 41 && edad <= 90){
+				alert("Eres un adulto mayor");
+			}else{
+				alert("Ingrese una edad valida del 1 al 90 ");
+			}
+
+			// edad = Number(edad);
+			// switch(edad){
+			// case 0: alert ("Acaba de nacer hace poco. No ha cumplido el año");
+			// break;
+   //          case 18: alert ("Está justo en la mayoría de edad");
+   //          break;
+   //          case 65: alert ("Está en la edad de jubilación");
+   //          break;
+   //          default: alert ("La edad no es crítica");
+   //          break;
+			// }
+		}
+	</script>
+	<button onclick="Switch()">Switch</button>
+	<button onclick="edad()">Ingresa tu edad</button>
+</body>
+</html>

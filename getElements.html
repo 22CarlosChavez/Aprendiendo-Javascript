@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>GET ELEMENTS FORMULARIO</title>
+</head>
+	<style type="text/css">
+		body {
+			background-color:white;
+			font-family: sans-serif;
+		}
+		label {
+			color: maroon;
+			display:block;
+			padding:5px;
+		}
+	</style>
+<body>
+	<script type="text/javascript">
+		function getElement(elemento){
+			//GET ELEMENTS BY TAG NAME
+			// El acceso a un nodo concreto del DOM usando getElementById es muy frecuente, pero hay otras maneras de acceder a los nodos del DOM. Una de ellas es usando getElementsByTagName('etiquetaBuscada'). Esta función nos devuelve un array conteniendo todos los nodos DOM cuya etiqueta coincide con etiquetaBuscada.
+			var elementosObtenidos = document.getElementsByTagName(elemento);
+			elementosObtenidos[0].style.backgroundColor = '#FF6633';
+			elementosObtenidos[1].style.backgroundColor = '#FF9933';
+			elementosObtenidos[2].style.backgroundColor = '#FFCC33';
+		}
+	</script>
+	<form name ="formularioContacto" class="formularioTipo1" method="get" action="accion.html" onclick="getElement('label')">
+		<p>Si quieres contactar con nosotros envíanos este formulario relleno:</p>
+		<label for="nombre"><span>Nombre:</span>
+			<input id="nombre" type="text" name="nombre" />
+		</label>
+		<label for="apellidos"><span>Apellidos:</span>
+			<input id="apellidos" type="text" name="apellidos" />
+		</label>
+		<label for="email"><span>Correo electrónico:</span>
+			<input id="email" type="text" name="email" /></label>
+		<label>
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Cancelar">
+		</label>
+	</form>
+</body>
+</html>

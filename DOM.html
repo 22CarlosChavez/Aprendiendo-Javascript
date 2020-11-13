@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+</head>
+<body>
+	<!-- <img src="https://www.aprenderaprogramar.com/images/stories/Cursos/CU011/CU01123E_2.png"> -->
+	<!-- A través de JavaScript podremos acceder a nodos con instrucciones del tipo document.getElementById("menu"); (acceder a un elemento por su id), pero también podremos crear nodos (por ejemplo document.createElement("h1"); ó document.body.appendChild(heading);). Todo esto es posible gracias a la existencia del DOM. -->
+	
+	<!-- <img src="https://www.aprenderaprogramar.com/images/stories/Cursos/CU011/CU01124E_1.png"> -->
+	<!-- 
+	a) Document: el nodo document es el nodo raíz, a partir del cual derivan el resto de nodos.
+	
+	b) Element: son los nodos definidos por etiquetas html. Por ejemplo una etiqueta div genera un nodo. Si dentro de ese div tenemos tres etiquetas p, dichas etiquetas definen nodos hijos de la etiqueta div.
+	
+	c) Text: el texto dentro de un nodo element se considera un nuevo nodo hijo de tipo text (texto). Los navegadores también crean nodos tipo texto sin contenido para representar elementos como saltos de línea o espacios vacíos.
+	
+	d) Attribute: los atributos de las etiquetas definen nodos, aunque trabajando con JavaScript no los veremos como nodos, sino que lo consideramos información asociada al nodo de tipo element.
+	
+	e) Comentarios y otros: los comentarios y otros elementos como las declaraciones doctype en cabecera de los documentos HTML generan nodos. -->
+
+	<!-- Final del código-->
+
+
+<script type = "text/javascript">
+		var msg = '';
+		msg = '¿Quién es el nodo padre de document? '+ document.parentNode + '\n\n';
+		msg = msg + 'Para el nodo document el nodeType vale: ' + document.nodeType +' , y el nodeName vale '+ document.nodeName + '\n\n';
+		msg = msg+ 'El valor de nodeValue para el nodo document es: ' + document.nodeValue +'\n\n';
+		msg = msg + 'Nodo hijo del nodo raíz es la declaración DOCTYPE con nodeName: ' + document.childNodes[0].nodeName +'\n\n';
+		msg = msg + 'Nodo hijo del nodo raíz es etiqueta html con nodeName: ' + document.childNodes[1].nodeName +' y nodeType: '+ document.childNodes[1].nodeType + '\n\n';
+		msg = msg + 'Número de hijos de nodo etiqueta html: ' + document.childNodes[1].childElementCount +' ( ' + document.childNodes[1].children.length +')\n\n';
+		msg = msg + 'Nodo hijo de etiqueta html es etiqueta head con nodeName: ' + document.childNodes[1].childNodes[0].nodeName +' y nodeType: '+ document.childNodes[1].childNodes[0].nodeType +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta html es tipo texto vacío (salto de línea entre terminación de head y comienzo de body): ' + document.childNodes[1].childNodes[1].nodeName +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta html es etiqueta body con nodeName: ' + document.childNodes[1].childNodes[2].nodeName +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta body es texto <<Texto en body>> con nodeName: ' + document.childNodes[1].childNodes[2].childNodes[0].nodeName +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta body es texto <<Texto en body>> con nodeValue: ' + document.childNodes[1].childNodes[2].childNodes[0].nodeValue +'\n\n';
+		var nodoBody = document.childNodes[1].childNodes[2];
+		msg = msg + '(Repetimos) Nodo hijo de etiqueta body es texto <<Texto en body>> con nodeValue: ' + nodoBody.childNodes[0].nodeValue +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta body es div con nodeName: ' + nodoBody.childNodes[1].nodeName +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta div es texto vacío (salto de línea) con nodeName: ' + nodoBody.childNodes[1].childNodes[0].nodeName +' y node value: '+ nodoBody.childNodes[1].childNodes[0].nodeValue + '\n\n';
+		msg = msg + 'Nodo hijo de etiqueta div es etiqueta H1 con nodeName: ' + nodoBody.childNodes[1].childNodes[1].nodeName +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta h1 es texto con nodeName: ' + nodoBody.childNodes[1].childNodes[1].childNodes[0].nodeName +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta h1 es etiqueta span con nodeName: ' + nodoBody.childNodes[1].childNodes[1].childNodes[1].nodeName +'\n\n';
+		var nodoSpan = nodoBody.childNodes[1].childNodes[1].childNodes[1];
+		msg = msg + 'Nodo hijo de etiqueta span es texto con nodeName: ' + nodoSpan.childNodes[0].nodeName +' y nodeValue: '+ nodoSpan.childNodes[0].nodeValue +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta h1 es texto con nodeName: ' + nodoBody.childNodes[1].childNodes[1].childNodes[2].nodeName +' y nodeValue: '+ nodoBody.childNodes[1].childNodes[1].childNodes[2].nodeValue +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta div es texto vacío (salto de línea) con nodeName: ' + nodoBody.childNodes[1].childNodes[2].nodeName +'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta div es img con nodeName: ' + nodoBody.childNodes[1].childNodes[3].nodeName +'\n\n';
+		msg = msg + 'Valor del atributo name de la imagen: ' + nodoBody.childNodes[1].childNodes[3].name +'\n\n';
+		var nodoImg = nodoBody.childNodes[1].childNodes[3];
+		msg = msg + 'Valor del atributo src de la imagen: ' + nodoImg.src +', valor de alt: ' + nodoImg.alt + '\n\n';
+		msg = msg + 'Valor del atributo title de la imagen: '+ nodoImg.title+'\n\n';
+		msg = msg + 'Nodo hijo de etiqueta body es texto vacío (salto de línea) con nodeName: ' + nodoBody.childNodes[2].nodeName +' y nodeType: '+nodoBody.childNodes[2].nodeType+' \n\n';
+		msg = msg + 'Nodo hijo de etiqueta body es comentario con nodeName: ' + nodoBody.childNodes[3].nodeName +' y nodeType: '+nodoBody.childNodes[3].nodeType+' y nodeValue: '+nodoBody.childNodes[3].nodeValue+' \n\n';
+		alert (msg);
+
+</script>
+
+</body>
+</html>
+</body>
+</html>

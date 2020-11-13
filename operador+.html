@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Operador +</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function operador(){
+			var adcon1, adcon2, adcon3;
+			var cadenaTexto1; 
+			var cadenaTexto2; 
+			var cadenaTexto3; 
+			var espacioTxt = ' ';
+			
+			adcon1=3; 
+			adcon2 = 4; 
+			result = adcon1 + adcon2;
+			alert ('Ahora result vale ' + result);
+			
+			adcon1 = 'Amanecer';
+			adcon2 = ' cálido';
+			result = adcon2;
+			if (adcon1 == 'Amanecer') {
+				alert ('Ahora result vale ' + result);	
+			}
+			
+			
+			cadenaTexto1 = 'Tomate';
+			cadenaTexto2 = 'frito'; 
+			cadenaTexto3 = cadenaTexto1+espacioTxt+cadenaTexto2;
+			alert ('La concatenación del texto es: \"' + cadenaTexto3 +'\"');
+		}
+	</script>
+	<button onclick="operador()">Click Operador</button>
+</body>
+</html>
